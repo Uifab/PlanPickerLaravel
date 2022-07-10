@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+  
+   # Remove public URL from the path
+   RewriteCond %{REQUEST_URI} !^/PlanPicker
+   RewriteRule ^(.*)$ /PlanPicker/public/$1 [L,QSA]
+    
+</IfModule>
